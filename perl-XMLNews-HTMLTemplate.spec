@@ -1,6 +1,6 @@
 %define module 	XMLNews-HTMLTemplate
 %define version 0.01
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary:	%{module} perl module
 Name: 		perl-%{module}
@@ -24,13 +24,11 @@ using news documents in XMLNews-Meta and XMLNews-Story format
 %setup -q -n %{module}-%{version}
 
 %build
-
 CFLAGS="$RPM_OPT_FLAGS" %{__perl} Makefile.PL INSTALLDIRS=vendor
-make
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 make PREFIX=$RPM_BUILD_ROOT%{_prefix} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean 
@@ -41,5 +39,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README MANIFEST Changes
 %{perl_vendorlib}/XMLNews
 %{_mandir}/*/*
-
-
