@@ -1,6 +1,6 @@
 %define module 	XMLNews-HTMLTemplate
 %define version 0.01
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary:	%{module} perl module
 Name: 		perl-%{module}
