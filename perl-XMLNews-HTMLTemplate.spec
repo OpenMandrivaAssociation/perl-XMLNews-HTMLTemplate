@@ -12,7 +12,6 @@ Url:		http://search.cpan.org/dist/%{module}
 Source0:	%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel 
 Requires:	perl 
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	perl(XMLNews::Meta)
 Buildarch:	noarch
 
